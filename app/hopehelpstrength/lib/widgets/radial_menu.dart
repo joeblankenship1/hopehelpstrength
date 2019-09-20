@@ -84,17 +84,17 @@ class RadialAnimation extends StatelessWidget {
               child: Stack(
                   alignment: Alignment.center,
                   children: <Widget>[
-                    _buildButton(0, color: Colors.red, icon: FontAwesomeIcons.thumbtack),
-                    _buildButton(45, color: Colors.green, icon:FontAwesomeIcons.sprayCan),
-                    _buildButton(90, color: Colors.orange, icon: FontAwesomeIcons.fire),
-                    _buildButton(135, color: Colors.blue, icon:FontAwesomeIcons.kiwiBird),
-                    _buildButton(180, color: Colors.black, icon:FontAwesomeIcons.cat),
-                    _buildButton(225, color: Colors.indigo, icon:FontAwesomeIcons.paw),
-                    _buildButton(270, color: Colors.pink, icon: FontAwesomeIcons.bong),
-                    _buildButton(315, color: Colors.yellow, icon:FontAwesomeIcons.bolt),
+                    _buildButton(0, color: Theme.of(context).primaryColor, icon: FontAwesomeIcons.brain),
+                    _buildButton(45, color: Theme.of(context).accentOrange, icon:FontAwesomeIcons.users),
+                    _buildButton(90, color: Theme.of(context).accentYellow, icon: FontAwesomeIcons.user-plus),
+                    _buildButton(135, color: Theme.of(context).accentGreen, icon:FontAwesomeIcons.user-tie),
+                    _buildButton(180, color: Theme.of(context).accentBlue, icon:FontAwesomeIcons.biking),
+                    _buildButton(225, color: Theme.of(context).accentGray, icon:FontAwesomeIcons.gift),
+                    _buildButton(270, color: Theme.of(context).accentPurple, icon: FontAwesomeIcons.sun),
+                    _buildButton(315, color: Theme.of(context).accentCyan, icon:FontAwesomeIcons.stethoscope),
                     Transform.scale(
                       scale: scale.value - 1,
-                      child: FloatingActionButton(child: Icon(FontAwesomeIcons.timesCircle), onPressed: _close, backgroundColor: Colors.red),
+                      child: FloatingActionButton(child: Icon(FontAwesomeIcons.timesCircle), onPressed: _close, backgroundColor: Theme.of(context).primaryColor),
                     ),
                     Transform.scale(
                       scale: scale.value,
