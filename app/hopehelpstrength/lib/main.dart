@@ -2,6 +2,7 @@ import 'package:hopehelpstrength/fab_with_icons.dart';
 import 'package:hopehelpstrength/fab_bottom_app_bar.dart';
 import 'package:hopehelpstrength/layout.dart';
 import 'package:flutter/material.dart';
+import 'package:hopehelpstrength/widgets/radial_menu.dart';
 
 void main() => runApp(MyApp());
 
@@ -58,12 +59,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Text(
-          _lastSelected,
-          style: TextStyle(fontSize: 32.0),
-        ),
-      ),
+      body: SizedBox.expand(child: RadialMenu()),
       bottomNavigationBar: FABBottomAppBar(
         centerItemText: 'A',
         color: Colors.grey,
@@ -71,10 +67,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         notchedShape: CircularNotchedRectangle(),
         onTabSelected: _selectedTab,
         items: [
-          FABBottomAppBarItem(iconData: Icons.menu, text: 'This'),
-          FABBottomAppBarItem(iconData: Icons.layers, text: 'Is'),
-          FABBottomAppBarItem(iconData: Icons.dashboard, text: 'Bottom'),
-          FABBottomAppBarItem(iconData: Icons.info, text: 'Bar'),
+          FABBottomAppBarItem(iconData: Icons.menu, text: 'Help'),
+          FABBottomAppBarItem(iconData: Icons.layers, text: 'Profile'),
+          FABBottomAppBarItem(iconData: Icons.dashboard, text: 'Contact'),
+          FABBottomAppBarItem(iconData: Icons.info, text: 'Info'),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
