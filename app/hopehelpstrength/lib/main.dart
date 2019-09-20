@@ -13,17 +13,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hope Help Strength',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
+        // Define the default brightness and colors.
+        brightness: Brightness.dark,
+        // red
+        primaryColor: Color(0xffDF504E),
+        // orange
+        accentOrange: Color(0xfff8a141),
+        // yellow
+        accentYellow: Color(0xfff7dc64),
+        // green
+        accentGreen: Color(0xff62b664),
+        // blue
+        accentBlue: Color(0xff4293c2),
+        // gray
+        accentGray: Color(0xff607078),
+        // purple
+        accentPurple: Color(0xff8864aa),
+        // light blue
+        accentCyan(0xff46bcce),
+        cardColor: Color(0xffEEE5E9),
+        // Define the default font family.
+        fontFamily: 'Montserrat',
+
+        // Define the default TextTheme. Use this to specify the default
+        // text styling for headlines, titles, bodies of text, and more.
+        textTheme: TextTheme(
+          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
       home: MyHomePage(title: 'Home'),
     );
   }
