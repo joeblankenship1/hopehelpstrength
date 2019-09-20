@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:vector_math/vector_math.dart' show radians, Vector3;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hopehelpstrength/utils/uidata.dart';
 
 class RadialMenu extends StatefulWidget {
   createState() => _RadialMenuState();
@@ -85,13 +86,13 @@ class RadialAnimation extends StatelessWidget {
                   alignment: Alignment.center,
                   children: <Widget>[
                     _buildButton(0, color: Theme.of(context).primaryColor, icon: FontAwesomeIcons.brain),
-                    _buildButton(45, color: Theme.of(context).accentOrange, icon:FontAwesomeIcons.users),
-                    _buildButton(90, color: Theme.of(context).accentYellow, icon: FontAwesomeIcons.user-plus),
-                    _buildButton(135, color: Theme.of(context).accentGreen, icon:FontAwesomeIcons.user-tie),
-                    _buildButton(180, color: Theme.of(context).accentBlue, icon:FontAwesomeIcons.biking),
-                    _buildButton(225, color: Theme.of(context).accentGray, icon:FontAwesomeIcons.gift),
-                    _buildButton(270, color: Theme.of(context).accentPurple, icon: FontAwesomeIcons.sun),
-                    _buildButton(315, color: Theme.of(context).accentCyan, icon:FontAwesomeIcons.stethoscope),
+                    _buildButton(45, color: UIData.accentOrange, icon:FontAwesomeIcons.users),
+                    _buildButton(90, color: UIData.accentYellow, icon: FontAwesomeIcons.userPlus),
+                    _buildButton(135, color: UIData.accentGreen, icon:FontAwesomeIcons.userTie),
+                    _buildButton(180, color: UIData.accentBlue, icon:FontAwesomeIcons.bicycle),
+                    _buildButton(225, color: UIData.accentGray, icon:FontAwesomeIcons.gift),
+                    _buildButton(270, color: UIData.accentPurple, icon: FontAwesomeIcons.sun),
+                    _buildButton(315, color: UIData.accentCyan, icon:FontAwesomeIcons.stethoscope),
                     Transform.scale(
                       scale: scale.value - 1,
                       child: FloatingActionButton(child: Icon(FontAwesomeIcons.timesCircle), onPressed: _close, backgroundColor: Theme.of(context).primaryColor),
