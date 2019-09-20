@@ -3,6 +3,7 @@ import 'package:hopehelpstrength/fab_bottom_app_bar.dart';
 import 'package:hopehelpstrength/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:hopehelpstrength/widgets/radial_menu.dart';
+import 'package:hopehelpstrength/utils/uidata.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,26 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hope Help Strength',
-      theme: ThemeData(
+        theme: ThemeData (
         // Define the default brightness and colors.
         brightness: Brightness.dark,
         // red
-        primaryColor: Color(0xffDF504E),
-        // orange
-        accentOrange: Color(0xfff8a141),
-        // yellow
-        accentYellow: Color(0xfff7dc64),
-        // green
-        accentGreen: Color(0xff62b664),
-        // blue
-        accentBlue: Color(0xff4293c2),
-        // gray
-        accentGray: Color(0xff607078),
-        // purple
-        accentPurple: Color(0xff8864aa),
-        // light blue
-        accentCyan(0xff46bcce),
-        cardColor: Color(0xffEEE5E9),
+        primaryColor: UIData.primaryColor,
+        cardColor: UIData.cardColor,
+        colorScheme: ColorScheme(primary: UIData.primaryColor, primaryVariant: UIData.accentOrange, secondary: UIData.accentYellow, secondaryVariant: UIData.accentGreen, surface: UIData.accentGray, background: UIData.accentCyan, error: UIData.accentPurple, onPrimary: UIData.accentCyan, onSecondary: UIData.accentCyan, onSurface: UIData.accentCyan, onBackground: UIData.accentCyan, onError: UIData.accentCyan, brightness: Brightness.light),
         // Define the default font family.
         fontFamily: 'Montserrat',
 
@@ -41,6 +29,7 @@ class MyApp extends StatelessWidget {
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
           body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
         ),
       home: MyHomePage(title: 'Home'),
     );
