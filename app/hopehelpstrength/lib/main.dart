@@ -1,3 +1,4 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hopehelpstrength/fab_with_icons.dart';
 import 'package:hopehelpstrength/fab_bottom_app_bar.dart';
 import 'package:hopehelpstrength/layout.dart';
@@ -74,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         notchedShape: CircularNotchedRectangle(),
         onTabSelected: _selectedTab,
         items: [
-          FABBottomAppBarItem(iconData: Icons.menu, text: 'Help'),
+          FABBottomAppBarItem(iconData: FontAwesomeIcons.handsHelping, text: 'Help'),
           FABBottomAppBarItem(iconData: Icons.layers, text: 'Profile'),
           FABBottomAppBarItem(iconData: Icons.dashboard, text: 'Contact'),
           FABBottomAppBarItem(iconData: Icons.info, text: 'Info'),
